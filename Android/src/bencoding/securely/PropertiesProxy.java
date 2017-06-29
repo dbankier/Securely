@@ -130,7 +130,6 @@ public class PropertiesProxy  extends KrollProxy implements TiLifecycle.OnLifecy
 		}
 
     if (useKeyStoreKey) {
-			LogHelpers.error(TiConvert.toString(options.get("iv")));
       _provider = new KeyStoreKeyPropertiesProvider(_identifier, TiConvert.toString(options.get("iv")), _encryptValues, _encryptFieldNames);
     } else {
       _provider = new PrefPropertiesProvider(_identifier, _secret, _encryptValues, _encryptFieldNames);
